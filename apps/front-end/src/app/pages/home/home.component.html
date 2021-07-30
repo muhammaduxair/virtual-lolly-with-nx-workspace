@@ -1,0 +1,18 @@
+<div class="content-wrapper">
+  <div class="lollies-box">
+    <virtual-lolly-lolly
+      *ngFor="let clr of lolliesColors"
+      colorTop="{{ clr.colorTop }}"
+      colorMiddle="{{ clr.colorMiddle }}"
+      colorBottom="{{ clr.colorBottom }}"
+      width="140"
+      height="350"
+    ></virtual-lolly-lolly>
+  </div>
+  <div class="create-bttn-box">
+    <virtual-lolly-button
+      title="create your own lolly"
+      link="/create"
+    ></virtual-lolly-button>
+  </div>
+</div>

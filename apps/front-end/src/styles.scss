@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Yellowtail&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 63.5%;
+}
+
+body::-webkit-scrollbar {
+  width: 5px;
+  background-color: #000;
+}
+body::-webkit-scrollbar-thumb {
+  background-color: #242020;
+}
+body {
+  min-width: 800px;
+}

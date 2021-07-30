@@ -1,0 +1,24 @@
+header {
+  width: 100%;
+  text-align: center;
+  cursor: default;
+  user-select: none;
+  > a {
+    text-shadow: #fa73d9 0 0 8px;
+    font-family: Yellowtail, cursive;
+    font-size: 8rem;
+    letter-spacing: 5px;
+    text-decoration: none;
+    color: #000;
+    &:hover {
+      text-shadow: 0 0 15px #fa73d9;
+      cursor: pointer;
+    }
+  }
+  p {
+    text-shadow: #fa73d9 0 0 8px;
+    font-family: Yellowtail, cursive;
+    font-size: 2.5rem;
+    letter-spacing: 3px;
+  }
+}

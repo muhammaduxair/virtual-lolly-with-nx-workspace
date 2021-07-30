@@ -1,0 +1,12 @@
+footer {
+  width: 100%;
+  color: #fff;
+  padding: 1.5rem 0;
+  text-align: center;
+  > p {
+    font-size: 1.6rem;
+    > a {
+      color: #fa73d9;
+    }
+  }
+}

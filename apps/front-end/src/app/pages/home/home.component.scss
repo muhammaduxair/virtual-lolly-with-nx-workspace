@@ -1,0 +1,16 @@
+.content-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 8rem 1rem;
+  .lollies-box {
+    display: flex;
+    > virtual-lolly-lolly {
+      margin: 0 2rem;
+    }
+  }
+  .create-bttn-box {
+    padding-top: 50px;
+  }
+}

@@ -1,0 +1,39 @@
+<div
+  *ngIf="!this.lollyData && !errorIndecator; else elseBlock1"
+  class="loading-spinner"
+>
+  <sa-spinner-round-filled size="180" color="#fa73d9"></sa-spinner-round-filled>
+</div>
+<ng-template #elseBlock1>
+  <div class="content-wrapper" *ngIf="this.lollyData; else elseBlock2">
+    <div class="left-box">
+      <virtual-lolly-lolly
+        colorTop="{{ lollyData.colorTop }}"
+        colorMiddle="{{ lollyData.colorMiddle }}"
+        colorBottom="{{ lollyData.colorBottom }}"
+      ></virtual-lolly-lolly>
+    </div>
+    <div class="right-box">
+      <div class="link-box">
+        <p>Share This Link With Your Friend</p>
+        <p>{{ lollyUrl + lollyData._id }}</p>
+      </div>
+      <div class="msg-box">
+        <p>{{ lollyData.reciever }}</p>
+        <p>{{ lollyData.message }}</p>
+        <p>— {{ lollyData.sender }}</p>
+      </div>
+      <p>
+        <b>{{ lollyData.sender }}</b> made this virtual lollipop for you. You
+        can make your <a routerLink="/create">own</a> to send to a friend who
+        deserve some sugary treat which won't rot their teeth...
+      </p>
+    </div>
+  </div>
+</ng-template>
+<ng-template #elseBlock2>
+  <div class="error-wrapper">
+    <h1>404 Page Not Found</h1>
+    <virtual-lolly-button title="Go Back" link="/"></virtual-lolly-button>
+  </div> </ng-template
+>te

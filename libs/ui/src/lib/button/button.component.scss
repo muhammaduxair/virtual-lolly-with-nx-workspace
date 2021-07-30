@@ -1,0 +1,24 @@
+.button {
+  font-size: 15px;
+  text-transform: uppercase;
+  color: #fa73d9;
+  font-weight: 700;
+  border-radius: 50px;
+  padding: 1.5rem 2rem;
+  border: 3px solid #fa73d9;
+  background: transparent;
+  &:hover {
+    background: #fa73d9;
+    color: #14141a;
+    cursor: pointer;
+  }
+  &:active {
+    background: #df59bd;
+  }
+}
+a {
+  text-decoration: none;
+  > button {
+    @extend .button;
+  }
+}

@@ -1,0 +1,109 @@
+<div class="content-wrapper">
+  <div class="left-box">
+    <virtual-lolly-lolly
+      colorTop="{{ defaultLollyColors.colorTop }}"
+      colorMiddle="{{ defaultLollyColors.colorMiddle }}"
+      colorBottom="{{ defaultLollyColors.colorBottom }}"
+    ></virtual-lolly-lolly>
+    <div>
+      <label for="colorTop">
+        <input
+          type="color"
+          id="colorTop"
+          [defaultValue]="defaultLollyColors.colorTop"
+          (change)="onClrChange($event)"
+        />
+      </label>
+      <label for="colorMiddle">
+        <input
+          type="color"
+          id="colorMiddle"
+          [value]="defaultLollyColors.colorMiddle"
+          (change)="onClrChange($event)"
+        />
+      </label>
+      <label for="colorBottom">
+        <input
+          type="color"
+          id="colorBottom"
+          [value]="defaultLollyColors.colorBottom"
+          (change)="onClrChange($event)"
+        />
+      </label>
+    </div>
+  </div>
+  <div class="right-box">
+    <form [formGroup]="createForm">
+      <label for="reciever">
+        To
+        <input
+          type="text"
+          id="reciever"
+          placeholder="a lolly for"
+          formControlName="reciever"
+        />
+        <p
+          *ngIf="
+            this.createForm.controls.reciever.touched &&
+            this.createForm.controls.reciever.errors &&
+            this.createForm.controls.reciever.errors.required
+          "
+        >
+          Reciever Name Required
+        </p>
+      </label>
+      <label for="message">
+        Enter Something Nice
+        <textarea
+          type="text"
+          id="message"
+          placeholder="hi!"
+          formControlName="message"
+        ></textarea>
+        <p
+          *ngIf="
+            this.createForm.controls.message.touched &&
+            this.createForm.controls.message.errors &&
+            this.createForm.controls.message.errors.required
+          "
+        >
+          Please Enter Something For Wish
+        </p>
+        <p
+          *ngIf="
+            this.createForm.controls.message.touched &&
+            this.createForm.controls.message.errors &&
+            this.createForm.controls.message.errors.minlength
+          "
+        >
+          Please Enter Minimum 10 Characters
+        </p></label
+      >
+
+      <label for="sender">
+        From
+        <input
+          type="text"
+          id="sender"
+          placeholder="from your friend"
+          formControlName="sender"
+        />
+        <p
+          *ngIf="
+            this.createForm.controls.sender.touched &&
+            this.createForm.controls.sender.errors &&
+            this.createForm.controls.sender.errors.required
+          "
+        >
+          Please Enter Your Name
+        </p>
+      </label>
+    </form>
+    <span>
+      <virtual-lolly-button
+        title="freeze lolly"
+        (onBtnClick)="onBtnClick()"
+      ></virtual-lolly-button>
+    </span>
+  </div>
+</div>

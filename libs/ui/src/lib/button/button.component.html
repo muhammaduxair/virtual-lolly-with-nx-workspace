@@ -1,0 +1,8 @@
+<a *ngIf="this.link; else elseBlock" routerLink="{{ link }}">
+  <button class="button">{{ title }}</button>
+</a>
+<ng-template #elseBlock>
+  <button class="button" (click)="bttnClick()">
+    {{ title }}
+  </button>
+</ng-template>
